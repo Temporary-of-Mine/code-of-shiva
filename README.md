@@ -1,37 +1,19 @@
 # code of shiva
 
-#### 介绍
-以前写过的一些 Demo，作为一个 ctrl + CV 程序员，CV 速度不能比别人慢
 
-#### 软件架构
-软件架构说明
+### 仓库简介
 
+主要用来放以前写过的一些 Demo。
 
-#### 安装教程
+作为一个 ctrl + CV 程序员，CV 速度不能比别人慢；所以弄个仓库方便以后抄作业/滑稽
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+<img src="http://shiva.oss-cn-hangzhou.aliyuncs.com/emo/unc/012C53FF8A00764006B0E19AA03D853B.png" style="text-align: center;margin: auto">
 
 
-#### 特技
+#### 开发环境
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- `JDK 1.8` 、 `Mysql 5.7` 、`IDEA`  、`lombok` 、`Maven`
+
+
+#### 模块目录
+
