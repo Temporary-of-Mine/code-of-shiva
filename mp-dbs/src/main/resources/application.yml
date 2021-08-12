@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    dynamic:
+      #设置默认的数据源或者数据源组,默认值即为master
+      primary: master
+      #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      strict: false
+      seata: true    #开启seata代理，开启后默认每个数据源都代理，如果某个不需要代理可单独关闭
+      seata-mode: AT #支持XA及AT模式,默认AT
+      datasource:
+        master:
+          username: root
+          password: root
+          url: jdbc:mysql://127.0.0.1:3306/code-of-shiva?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave_1:
+          username: root
+          password: root
+          url: jdbc:mysql://127.0.0.1:3306/shiva-maybe?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group:  ${spring.application.name}-group
+  enable-auto-data-source-proxy: false   #一定要是false
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default  #key与上面的tx-service-group的值对应
+    grouplist:
+      default: 127.0.0.1:8091 #seata-server地址仅file注册中心需要
+  config:
+    type: file
+  registry:
+    type: file
