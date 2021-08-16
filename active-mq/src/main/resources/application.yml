@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  activemq:
+    # 安装 activemq 的 ip端口
+    broker-url: tcp://120.55.45.66:8089
+    user: admin
+    password: admin33221
+    # 在考虑结束之前等待的时间
+    close-timeout: 15s
+  jms:
+    #默认情况下activemq提供的是queue模式。 发布订阅: false 表示 queue，true 表示 topic
+    pub-sub-domain: false
+#    pub-sub-domain: true

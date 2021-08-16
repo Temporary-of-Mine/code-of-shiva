@@ -21,6 +21,7 @@
 
 | 模块名                 | 内容                                 |
 | ---------------------- | ------------------------------------ |
+| [active-mq](./active-mq) | spring-boot 集成 active-mq，queue/topic 使用 |
 | [activiti](./activiti) | spring-boot 集成 activiti 7 流程引擎 |
 | [logback](./logback) | spring-boot、logback 日志建单配置使用   |
 | [mp-dbs](./mp-dbs) | spring-boot、mybatis-plus 多数据源   |

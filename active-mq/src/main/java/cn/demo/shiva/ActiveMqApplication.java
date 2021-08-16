@@ -1,13 +1,13 @@
-package cn.demo.shiva.mpdbs;
+package cn.demo.shiva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MpDbsApplication {
+public class ActiveMqApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MpDbsApplication.class, args);
+		SpringApplication.run(ActiveMqApplication.class, args);
 	}
 
 }
