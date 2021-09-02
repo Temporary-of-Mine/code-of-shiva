@@ -25,3 +25,5 @@
 | [activiti](./activiti) | spring-boot 集成 activiti 7 流程引擎 |
 | [logback](./logback) | spring-boot、logback 日志建单配置使用   |
 | [mp-dbs](./mp-dbs) | spring-boot、mybatis-plus 多数据源   |
+| [rabbit-mq](./rabbit-mq) | spring-boot 集成 rabbit-mq 测试   |
+| [swagger](./swagger) | spring-boot 不同UI的swagger 配置集成示例   |
