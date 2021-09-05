@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    host: 120.27.223.76
+    port: 8465
+    username: ywdz
+    password: ywdz3.3test
+    virtual-host: mqDocker76
+    listener:
+      simple:
+        # 多消费者轮询模式
+        prefetch: 1  #每个消费者都能收到的未被消费的最大消息数量
+        # 设置消费端手动 ack（无异常）。---nack（存在异常）
+        # manual：手动，auto：自动
+        acknowledge-mode: manual
+    # 发送者开启 confirm 确认机制
+    publisher-confirm-type: simple
+    publisher-returns: true
+
+
