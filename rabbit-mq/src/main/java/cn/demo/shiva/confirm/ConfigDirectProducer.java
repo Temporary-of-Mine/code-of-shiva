@@ -1,6 +1,7 @@
 package cn.demo.shiva.confirm;
 
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +33,7 @@ public class ConfigDirectProducer {
         map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
         //将消息携带绑定键值：directRouting 发送到交换机 directExchange
-        rabbitTemplate.convertAndSend("directExchange", "directRouting", map);
+        rabbitTemplate.convertAndSend("directExchange", "directRouting", map, new CorrelationData());
 
         return JSONObject.toJSONString(map);
     }
