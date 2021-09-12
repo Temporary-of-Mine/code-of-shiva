@@ -1,9 +1,9 @@
 spring:
   rabbitmq:
-    host: 120.27.223.76
-    port: 8465
-    username: ywdz
-    password: ywdz3.3test
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
     virtual-host: mqDocker76
     listener:
       simple:
