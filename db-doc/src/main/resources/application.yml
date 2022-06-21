@@ -1,0 +1,13 @@
+ignore-pre-fix: qrtz_,gen_
+
+spring:
+  datasource:
+    dynamic: # ??????
+      primary: master
+      datasource:
+        master:
+          name: ry-vue
+          url: jdbc:mysql://127.0.0.1:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+          driver-class-name: com.mysql.jdbc.Driver
+          username: root
+          password: root
