@@ -24,6 +24,7 @@
 | [active-mq](./active-mq) | spring-boot 集成 active-mq，queue/topic 使用 |
 | [activiti](./activiti) | spring-boot 集成 activiti 7 流程引擎 |
 | [db-doc](./db-doc) | 导出数据库文档小工具 |
+| [json-desensitize](./json-desensitize) | JSON返回数据脱敏小工具 |
 | [logback](./logback) | spring-boot、logback 日志建单配置使用   |
 | [mp-dbs](./mp-dbs) | spring-boot、mybatis-plus 多数据源   |
 | [quartz](./quartz) | spring-boot、quartz 任务调度框架集成   |
