@@ -30,4 +30,5 @@
 | [quartz](./quartz) | spring-boot、quartz 任务调度框架集成   |
 | [rabbit-mq](./rabbit-mq) | spring-boot 集成 rabbit-mq 测试   |
 | [rabbit-mq-second](./rabbit-mq-second) |  rabbit-mq 死信队列、延迟队列、镜像队列   |
+| [redission-test](./redission-test) | redisson分布式锁 以及 实现路径 |
 | [swagger](./swagger) | spring-boot 不同UI的swagger 配置集成示例   |
