@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试SSE</title>
+    <script th:src="@{/static/vue.global.js}"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <button @click="send">发起调用</button>
+        <button @click="end">中止输出</button>
+    </div>
+    <div style="margin-top: 15px">
+        <textarea v-model="content" rows="20">
+        </textarea>
+    </div>
+
+</div>
+<script>
+    Vue.createApp({
+        el: '#app',
+        data() {
+            return {
+                content: "",
+                sse: null,
+            }
+        },
+        created() {
+        },
+        methods: {
+            send() {
+                const that = this
+                if (that.sse) return; // 避免重复创建
+                //TODO 会自动重连，就算后台已经完成了本次接口调用，也会重新链接；所以只能做一个demo
+                // that.sse = new EventSource('/sse');
+                that.sse = new EventSource('/springSSE');
+                that.sse.onmessage = function (evt) {
+                    if (evt.data.indexOf("event: close") !== -1) {
+                        that.sse.close()
+                        this.sse = null
+                        return
+                    }
+                    that.content = that.content + evt.data
+                }
+            },
+            end() {
+                if (this.sse == null) {
+                    return
+                }
+                this.sse.close()
+                this.sse = null
+            }
+        }
+    }).mount("#app");
+</script>
+
+</body>
+</html>

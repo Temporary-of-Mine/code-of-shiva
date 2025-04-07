@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/templates/
+  # 文件上传大小
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 500MB
+
+
+
